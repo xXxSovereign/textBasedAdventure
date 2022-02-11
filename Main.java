@@ -6,6 +6,7 @@ public class Main {
         Player user = new Player(10, 5);
 
         System.out.println(user.hp);
+        //test
     }
 
 

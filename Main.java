@@ -5,8 +5,16 @@ public class Main {
 
     static char choice;
     static Scanner scan = new Scanner(System.in);
+    static boolean[] flags = new boolean[7];
+
+
 
     public static void main(String[] args) {
+
+        randomize();
+        for (boolean b: flags) {
+            System.out.println(b);
+        }
 
         System.out.println("""
                 You wake up in a dilapidated building, with an eerie silence...
@@ -31,6 +39,12 @@ public class Main {
 
     public static void randomize(){
         Random r = new Random();
+        int x = 0;
+        for (int i = 0; i < 7; i++){
+            if (r.nextInt(2) == 1){
+                flags[i] = true;
+            }
+        }
 
 
 

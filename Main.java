@@ -1,17 +1,42 @@
-import org.w3c.dom.ls.LSOutput;
+import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Player user = new Player(10, 5);
 
-        System.out.println(user.hp);
-        //test
+
+
+    public static void main(String[] args) {
+
+        System.out.println("You wake up in a dilapidated building, with an eerie silence... ");
+
+
+
+    }
+
+
+    public static void randomize(){
+        Random r = new Random();
+
+
+
     }
 
 
 
-    // start
+    public static void ecologist(){
+
+
+    }
+
+    public static void loner(){
+
+
+    }
+
+    public static void merc(){
+
+
+    }
 
 
 

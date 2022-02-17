@@ -1,20 +1,14 @@
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     static char choice;
     static Scanner scan = new Scanner(System.in);
-    static boolean[] flags = new boolean[7];
-
-
+    static boolean[] flags = new boolean[10];
 
     public static void main(String[] args) {
 
         randomize();
-        for (boolean b: flags) {
-            System.out.println(b);
-        }
 
         System.out.println("""
                 You wake up in a dilapidated building, with an eerie silence...
@@ -22,6 +16,8 @@ public class Main {
                 1. I am an ecologist
                 2. I am a loner
                 3. I am a mercenary""");
+
+
 
         choice = scan.nextLine().charAt(0);
         switch (choice) {
@@ -37,17 +33,15 @@ public class Main {
     }
 
 
-    public static void randomize(){
+    public static void randomize() {
         Random r = new Random();
         int x = 0;
-        for (int i = 0; i < 7; i++){
-            if (r.nextInt(2) == 1){
+        for (int i = 0; i < flags.length; i++) {
+            if (r.nextInt(2) == 1) {
                 flags[i] = true;
             }
+
         }
-
-
-
     }
 
 
@@ -55,7 +49,7 @@ public class Main {
     public static void ecologist(){
 
 System.out.println("THESE ARE RESEARCHERS WHO ENTER THE ZONE TO FIND REASONING OF IT’S CREATION AND A SOLUTION TO END IT. THEIR RESEARCH IS VALUABLE AND MANY MERCENARIES ARE PAYED TO HUNT THEM FOR THEIR INFORMATION. THEY ARE NOT WELL ARMED AND TYPICALLY PAY STALKERS AS A SECURITY AT THEIR RESEARCH LOCATION.\n");
-System.out.println("You are in a Labrotary enclosed by a dome in a place called 'Yantar'. You were working on a project that is slowing down with progress. Do you wish to continue to work. Or do you want to be reassigned a new assignemt? Y/N");
+System.out.println("You are in a Laboratory enclosed by a dome in a place called 'Yantar'. You were working on a project that is slowing down with progress. Do you wish to continue to work. Or do you want to be reassigned a new assignemt? Y/N");
 
         choice = scan.nextLine().charAt(0);
 

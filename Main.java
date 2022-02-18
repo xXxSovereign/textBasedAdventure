@@ -52,6 +52,7 @@ System.out.println("THESE ARE RESEARCHERS WHO ENTER THE ZONE TO FIND REASONING O
 System.out.println("You are in a Laboratory enclosed by a dome in a place called 'Yantar'. You were working on a project that is slowing down with progress. Do you wish to continue to work. Or do you want to be reassigned a new assignemt? Y/N");
 
         choice = scan.nextLine().charAt(0);
+        //test
 
 
 

@@ -4,7 +4,7 @@ public class Main {
 
     static char choice;
     static Scanner scan = new Scanner(System.in);
-    static boolean[] flags = new boolean[10];
+    static boolean[] flags = new boolean[10]; // flags for luck rolls when playing
 
     public static void main(String[] args) {
 

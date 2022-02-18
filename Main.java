@@ -8,6 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //test 124
+
         randomize();
 
         System.out.println("""
@@ -35,7 +37,6 @@ public class Main {
 
     public static void randomize() {
         Random r = new Random();
-        int x = 0;
         for (int i = 0; i < flags.length; i++) {
             if (r.nextInt(2) == 1) {
                 flags[i] = true;

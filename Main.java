@@ -50,11 +50,14 @@ public class Main {
     public static void ecologist(){
 
 System.out.println("THESE ARE RESEARCHERS WHO ENTER THE ZONE TO FIND REASONING OF IT’S CREATION AND A SOLUTION TO END IT. THEIR RESEARCH IS VALUABLE AND MANY MERCENARIES ARE PAYED TO HUNT THEM FOR THEIR INFORMATION. THEY ARE NOT WELL ARMED AND TYPICALLY PAY STALKERS AS A SECURITY AT THEIR RESEARCH LOCATION.\n");
-System.out.println("You are in a Laboratory enclosed by a dome in a place called 'Yantar'. You were working on a project that is slowing down with progress. Do you wish to continue to work. Or do you want to be reassigned a new assignemt? Y/N");
+System.out.println("You are in a Laboratory enclosed by a dome in a place called 'Yantar'. You were working on a project that is slowing down with progress. Do you wish to continue to work.(1) Or do you want to be reassigned a new assignemt? (2)");
 
         choice = scan.nextLine().charAt(0);
         //test
-System.out.println("Test");
+if(choice == 1){
+    System.out.println("You had your Eureka moment. You need a tool that Professor Sahkorov suggests you should ask the people inside the bar in Duty Territory. You will have to go through Rostok which has sighted Mercenaries recently. You head out with your Protective Suit and a fully loaded Makorov PM.")
+
+}
 
 
     }

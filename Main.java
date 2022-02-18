@@ -2,13 +2,12 @@ import java.util.*;
 
 public class Main {
 
+    static Random r = new Random();
     static char choice;
     static Scanner scan = new Scanner(System.in);
     static boolean[] flags = new boolean[10]; // flags for luck rolls when playing
 
     public static void main(String[] args) {
-
-        //test 124
 
         randomize();
 
@@ -36,7 +35,6 @@ public class Main {
 
 
     public static void randomize() {
-        Random r = new Random();
         for (int i = 0; i < flags.length; i++) {
             if (r.nextInt(2) == 1) {
                 flags[i] = true;
@@ -63,8 +61,18 @@ if(choice == 1){
     }
 
     public static void loner(){
-System.out.println("THEY COME FROM MANY BACKGROUNDS AS BEING THE ONLY FACTION THAT TRULY HAS ONLY ALLIEGENCE TO THEMSELVES AND TO THEIR WORK. COLLECTING ARTIFACTS IS MAIN SOURCE OF INCOME WHILE SOME DO SECURITY. OTHERS COME TO REBUILD DESTROYED LIVES OR TO SEEK OUT “THE WISH GRANTER”. A RUMOR THAT AN ENTITY THAT LIES IN THE CENTER OF THE ZONE THAT WILL GRANT YOUR WISHES. THEY ARE TYPICALLY DYNAMIC WITH WEAPONRY BASED ON THEIR LUCK AND EXPERIENCE.\n" +
-        "\n");
+System.out.println("""
+        Backstory:\s
+        THEY COME FROM MANY BACKGROUNDS AS BEING THE ONLY FACTION THAT TRULY HAS ONLY ALLEGIANCE TO THEMSELVES AND TO THEIR WORK.
+        COLLECTING ARTIFACTS IS MAIN SOURCE OF INCOME WHILE SOME DO SECURITY. OTHERS COME TO REBUILD DESTROYED LIVES OR TO SEEK OUT “THE WISH GRANTER”.
+        A RUMOR THAT AN ENTITY THAT LIES IN THE CENTER OF THE ZONE THAT WILL GRANT YOUR WISHES. THEY ARE TYPICALLY DYNAMIC WITH WEAPONRY BASED ON THEIR LUCK AND EXPERIENCE.
+        
+        You're in Cordon, a checkpoint at the border of the exclusion zone. Many newcomers are located here.
+        
+        """);
+
+
+
 
     }
 

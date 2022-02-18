@@ -54,7 +54,7 @@ System.out.println("You are in a Laboratory enclosed by a dome in a place called
 
         choice = scan.nextLine().charAt(0);
         //test
-
+System.out.println("Test");
 
 
     }

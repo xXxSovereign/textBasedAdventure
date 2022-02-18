@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class Main {
@@ -53,9 +54,10 @@ System.out.println("You are in a Laboratory enclosed by a dome in a place called
         choice = scan.nextLine().charAt(0);
         //test
 if(choice == 1){
-    System.out.println("You had your Eureka moment. You need a tool that Professor Sahkorov suggests you should ask the people inside the bar in Duty Territory. You will have to go through Rostok which has sighted Mercenaries recently. You head out with your Protective Suit and a fully loaded Makorov PM.")
+    System.out.println("You had your Eureka moment. You need a tool that Professor Sahkorov suggests you should ask the people inside the bar in Duty Territory. You will have to go through Rostok which has sighted Mercenaries recently. You head out with your Protective Suit and a fully loaded Makorov PM.");
 
 }
+
 
 
     }
@@ -68,8 +70,63 @@ System.out.println("""
         A RUMOR THAT AN ENTITY THAT LIES IN THE CENTER OF THE ZONE THAT WILL GRANT YOUR WISHES. THEY ARE TYPICALLY DYNAMIC WITH WEAPONRY BASED ON THEIR LUCK AND EXPERIENCE.
         
         You're in Cordon, a checkpoint at the border of the exclusion zone. Many newcomers are located here.
+        You decide to take a stroll outside. There is a man advertising jobs, and a makeshift bar with people flowing in and out.
+        
+        1. Go to the Bar
+        2. Take a job
         
         """);
+
+        if (scan.nextInt() == 1) {
+
+            System.out.println("""
+                    You enter the bar and get a drink. By chance, you hear another patron talking about a way to the center
+                    You decide to listen in more on this rumor.
+                    You learn that there is a way to the center through garbage and the Bar.
+                                        
+                    You gulp down the rest of your drink and start on your way to Garbage.
+                                        
+                    Garbage is full of bandits and thieves. If you're lucky, you wont get bothered.
+                    """);
+
+            if (flags[0]) {
+                System.out.println("You got lucky and snuck through Garbage without a problem");
+            } else {
+                System.out.println("""
+                        You were spotted by bandits and they've decided to harass you
+                        You have a few choices:
+                                                
+                        1. Fight
+                        2. Negotiate/Run
+                                                
+                        """);
+
+                switch (scan.nextInt()) {
+                    case 1 -> {
+                        if (flags[1])
+                            System.out.println("You successfully fought them off and you escape before more show up. You make it through the rest of Garbage without a hitch");
+                        else {
+                            System.out.println("You regret skipping Karate class one too many times as the bandits tear you limb from limb.");
+                            System.exit(1);
+                        }
+                    }
+                    case 2 -> {
+                        if (flags[1]) System.out.println("You manage to escape successfully! You make it through the rest of Garbage without a hitch");
+                        else {
+                            System.out.println("You should've taken more public speaking classes. You stumble on all your words and they decide to just dispose of you.");
+                            System.exit(1);
+                        }
+                    }
+                }
+
+                System.out.println("");
+            }
+        }
+
+        else {
+            System.out.println("temp");
+
+        }
 
 
 

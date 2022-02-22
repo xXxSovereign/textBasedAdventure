@@ -60,16 +60,19 @@ if(choice == 1){
 
 
 
-    }if (flags[0]){
+    if (flags[0])
+
+    {
         System.out.println("Gunfire cracks with rounds hitting around you. You can see them in the old construction project to your right while you hide behind a train car on the oppisite side. Do you Negotiate (1) Stand your ground? (2) or Attempt to dash through to the Duty outpost around the corner of the street? (3)");
 
         switch (choice) {
             case '1' -> {
-                if(flags[1]){
+                if (flags[1]) {
                     System.out.println("They honor our ceasefire as they approach, you notice they dawn dark clothing and western tactical gear. They ");
-                }else {System.out.println();
-
+                } else {
+                    System.out.println();
                 }
+            }
                 case '2' -> {
 
                     System.out.println("");
@@ -89,8 +92,11 @@ if(choice == 1){
             }
 
 
-        }else {System.out.println("You made it through Rostok undetected and unscaved. You make it into the Underground Bar and pass by the Duty Member gaurding the bunker. Do you ask around? (1) Or do you Barter ?(2)");
+        }else{
+        System.out.println("You made it through Rostok undetected and unscaved. You make it into the Underground Bar and pass by the Duty Member gaurding the bunker. Do you ask around? (1) Or do you Barter ?(2)");
     }
+    }
+
 
     public static void loner(){
 System.out.println("""
@@ -164,8 +170,12 @@ System.out.println("""
     }
 
     public static void merc(){
-System.out.println("\n" +
-        "PEOPLE WHO ENTER THE ZONE FOR HIGH-RISK, HIGH-PROFIT JOBS. SOME OF THEIR LARGEST YEILDS ARE TARGETED TORWARDS ECOLOGISTS. THEY ARE HATED AMONGST MOST IN THE ZONE WITH SUSPISCION OF BEING WESTERN OUTSIDERS. THEY CARRY HIGH-QUALITY EQUIPMENT AND WEAPONRY MAINLY FROM NATO NATIONS. \n");
+System.out.println("""
+
+        PEOPLE WHO ENTER THE ZONE FOR HIGH-RISK, HIGH-PROFIT JOBS. SOME OF THEIR LARGEST YIELDS ARE TARGETED TOWARDS ECOLOGISTS.
+        THEY ARE HATED AMONGST MOST IN THE ZONE WITH SUSPICION OF BEING WESTERN OUTSIDERS.
+        THEY CARRY HIGH-QUALITY EQUIPMENT AND WEAPONRY MAINLY FROM NATO NATIONS.\s
+        """);
 
     }
 

@@ -113,6 +113,8 @@ System.out.println("""
         
         """);
 
+
+        // Follow the rumor
         if (scan.nextInt() == 1) {
 
             System.out.println("""
@@ -143,22 +145,120 @@ System.out.println("""
                             System.out.println("You successfully fought them off and you escape before more show up. You make it through the rest of Garbage without a hitch");
                         else {
                             System.out.println("You regret skipping Karate class one too many times as the bandits tear you limb from limb.");
-                            System.exit(1);
+                            System.exit(1); // 1 (Ending count)
                         }
                     }
                     case 2 -> {
-                        if (flags[1]) System.out.println("You manage to escape successfully! You make it through the rest of Garbage without a hitch");
+                        if (flags[1] && flags[2]){
+                            System.out.println("All those public speaking clases you took really paid off. You negotiated so well they decided to take you along with them as a partner." +
+                                    " You live a life full of wealth and murder.");
+                            System.exit(1); // 2
+                        }
+                        else if (flags[1]) {
+                            System.out.println("You negotiated well and escaped without a hitch! You made it through the rest of Garbage without a problem.");
+                        }
                         else {
                             System.out.println("You should've taken more public speaking classes. You stumble on all your words and they decide to just dispose of you.");
-                            System.exit(1);
+                            System.exit(1); // 3
                         }
                     }
-                }//test
-
-                System.out.println("");
+                }
             }
+            System.out.println("""
+                    
+                    You arrive at the Bar, an old fallout shelter.
+                    There are many mercenaries and experienced travelers around.
+                    
+                    You have a few choices:
+                        1. Sit down and grab a drink
+                        2. Talk to some of the travelers about going to the center
+                    
+                    """);
+            switch (scan.nextInt()){
+                case 1 -> System.out.println("You sit down at the bar. A traveler walks up and asks to join you. He proceeds to tell you about his travels to the center");
+                case 2 -> System.out.println("You walk up to a traveler and ask about traveling to the center");
+
+            }
+            if (flags[3]){
+                System.out.println("""
+                        The traveler tells you that it is impossible to get to the center. There is a huge amount of radiation near the center that melts your flesh off. 
+                        No traveler has ever been able to make it to the center alive. He encourages you to stop and give up
+                       
+                        With this news, you feel very conflicted. Do you keep on trying?
+                        1. Yes
+                        2. Give up
+                        """);
+                if (scan.nextInt() == 2){
+                    System.out.println("You decide to give up on your greatest ambition. Utter failure.");
+                    System.exit(1); // 4
+                }
+
+                System.out.println("""
+                        You decide to ignore what the traveler says and tell him you're going to try anyways.
+                        Seeing your determination, he tells you that there is a scientist in Yantar that might be able to help you.
+                        """);
+
+            } else {
+                System.out.println("""
+                        You ask one of the more experienced travelers about getting to the center
+                        He tells you that there is a scientist in Yantar that might be able to help you.
+                        
+                        """);
+            }
+
+            System.out.println("""
+            Thankfully, you know a back way to Yantar that is relatively safe.
+            
+            The trip there is relatively easy and short without any problems
+            
+            Once you arrive you head inside the Yantar lab to find the scientist.
+            After searching for a little you find him in a server room. 
+            
+            You tell him your ambition and ask for his help. 
+            
+            He has a special suit that will allow you to enter the center without dying. However the suit comes with a hefty price.
+            
+            1. Do a job for the scientist as payment
+            2. Negotiate the price down
+            3. Threaten the scientist for the suit. 
+            """);
+
+            switch (scan.nextInt()) {
+
+                case 1 -> {
+                    System.out.println("""
+                            The scientist wants you to kill some mercs that are hunting him, and in return he'll give you the suit.
+                            
+                            Do you accept?
+                                1. Yes
+                                2. No
+                            """);
+                    if (scan.nextInt() == 1) {
+                        System.out.println();
+
+                    } else {
+                        System.out.println();
+                    }
+
+                }
+
+                case 2 -> {
+
+
+                }
+
+                case 3 -> {
+
+
+                }
+            }
+
         }
 
+
+
+
+        // Take a job
         else {
             System.out.println("temp");
 
